@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "77670012-0a88-4437-9858-d951a0f7642e",
+		"name": "web - ORM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19179859"
+	},
+	"item": [
+		{
+			"name": "Final",
+			"item": [
+				{
+					"name": "article",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/articles?page=1&per_page=5",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"articles"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Future",
+											"disabled": true
+										},
+										{
+											"key": "is_published",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "5"
+										},
+										{
+											"key": "tag",
+											"value": "2",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/articles/3",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"articles",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/articles",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"articles"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"demo\",\n    \"content\": \"demo content\",\n    \"author_id\": 1,\n    \"tags\": [1,2],\n    \"published_at\": \"2024-05-26\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/articles/1",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"articles",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/articles/16",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"articles",
+										"16"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/users",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "lee",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "per_page",
+											"value": "10",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/users/1",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/users",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"user_name\": \"\",\n    \"email\": \"\",\n    \"password\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/users/1",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"users",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/users/300",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"users",
+										"300"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tag",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/tags?page=1&per_page=10",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tags"
+									],
+									"query": [
+										{
+											"key": "search",
+											"value": "Top movies",
+											"disabled": true
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "per_page",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/tags/1",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tags",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"mer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/tags",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\" : \"mer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{article-mng-api}}/tags/74",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tags",
+										"74"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/tags/78",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tags",
+										"78"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Master Data",
+					"item": [
+						{
+							"name": "Author",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/author-select-options",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"author-select-options"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tag",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{article-mng-api}}/tag-select-options",
+									"host": [
+										"{{article-mng-api}}"
+									],
+									"path": [
+										"tag-select-options"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "home",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{article_base_url}}",
+							"host": [
+								"{{article_base_url}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{article-mng-api}}/login",
+							"host": [
+								"{{article-mng-api}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Me",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"demo@gmail.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{article-mng-api}}/me",
+							"host": [
+								"{{article-mng-api}}"
+							],
+							"path": [
+								"me"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcyMjA5OTU4MCwiZXhwIjoxNzIyMTAzMTgwfQ.AM4sscpaeG57s1mO1DdJeoBe3uDbhAtOWms-JV92xQk",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "article-mng-api",
+			"value": "article-mng-api.local/api"
+		}
+	]
+}

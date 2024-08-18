@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  app:
+    image: article-mng-app
+    build: .
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3000:4200"
+    environment:
+      DATABASE_URL: postgres://postgres:secret@db:5432/article_management
+    depends_on:
+      - db
+    command: >
+      sh -c "npx prisma generate &&
+             npx nodemon index.js"
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: article_management
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:

@@ -1,0 +1,48 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:node/recommended"
+  ],
+  "env": {
+    "commonjs": true,
+    "es6": true,
+    "node": true
+  },
+  "rules": {
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "no-unused-vars": "warn",
+    "no-console": "off", // Adjust as needed (warn or error)
+    "semi": [
+      "error",
+      "always"
+    ],
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "object-curly-spacing": [
+      "error",
+      "always"
+    ],
+    "array-bracket-spacing": [
+      "error",
+      "always"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1
+      }
+    ],
+    "no-trailing-spaces": "error",
+    "eol-last": [
+      "error",
+      "always"
+    ],
+    "no-undef": "warn",
+    "no-extra-semi": "error"
+  }
+}
