@@ -99,13 +99,6 @@ The project follows a modular architecture to ensure scalability and maintainabi
 
 - `src/middleware/error-exception.middleware.js`: Handles errors and sends appropriate responses.
 
-## Running Tests
-
-To run tests, use the following command:
-```sh
-npm test
-```
-
 
 ## Contributing
 

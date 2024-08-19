@@ -1,16 +1,16 @@
 /**
  * Sends a response with the given status code, message, body, and meta information.
  * @param {object} res - The response object.
- * @param {number} statusCode - The HTTP status code.
+ * @param {number} status_code - The HTTP status code.
  * @param {string} message - The response message.
- * @param {object|null} [body=null] - The response body.
+ * @param {object|null} [data=null] - The response body.
  * @param {object|null} [meta=null] - The meta information.
  */
-const sendResponse = (res, statusCode, message, body = null, meta = null) => {
-	res.status(statusCode).send({
-		status_code: statusCode,
+const sendResponse = (res, status_code, message, data = null, meta = null) => {
+	res.status(status_code).send({
+		status_code,
 		message,
-		data: body,
+		data,
 		meta,
 	});
 };
