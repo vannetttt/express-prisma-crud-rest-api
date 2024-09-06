@@ -3,9 +3,9 @@ const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
 const cors = require('cors');
-const { endPointNotFoundMiddleware } = require('./src/middleware/not-found.middleware');
-const { errorHandler } = require('./src/middleware/error-exception.middleware');
-const { verifyToken } = require('./src/middleware/auth.middleware');
+const { endPointNotFoundMiddleware } = require('./src/middleware/not-found');
+const { errorHandler } = require('./src/middleware/error-exception');
+const { verifyToken } = require('./src/middleware/auth');
 
 // Register environment variables
 dotenv.config({ path: path.join(__dirname, '.env') });

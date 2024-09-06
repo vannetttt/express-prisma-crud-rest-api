@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { index, store, show, update, togglePublish, destroy } = require('../controllers/article.controllers');
-const { storeRules, updateRules } = require('../middleware/rules/article.middleware');
-const { validate } = require('../middleware/validate.middleware');
+const { index, store, show, update, togglePublish, destroy } = require('../controllers/article');
+const { storeRules, updateRules } = require('../middleware/rules/article');
+const { validate } = require('../middleware/validate');
 
 router.route('/articles')
 	.get(index)

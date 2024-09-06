@@ -92,12 +92,12 @@ The project follows a modular architecture to ensure scalability and maintainabi
 
 ### Validation Middleware
 
-- `src/middleware/rules/user.middleware.js`: Contains validation rules for user-related operations.
-- `src/middleware/validate.middleware.js`: Middleware to validate requests using express-validator.
+- `src/middleware/rules/user.js`: Contains validation rules for user-related operations.
+- `src/middleware/validate.js`: Middleware to validate requests using express-validator.
 
 ### Error Handling Middleware
 
-- `src/middleware/error-exception.middleware.js`: Handles errors and sends appropriate responses.
+- `src/middleware/error-exception.js`: Handles errors and sends appropriate responses.
 
 
 ## Contributing

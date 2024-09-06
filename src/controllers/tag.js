@@ -1,5 +1,5 @@
-const tagService = require('../services/tag.services');
-const { serialize, serializeCollection } = require('../serializers/tag.serializers');
+const tagService = require('../services/tag');
+const { serialize, serializeCollection } = require('../serializers/tag');
 const {
 	paginated,
 	internalError,
@@ -112,7 +112,7 @@ const destroy = async (req, res) => {
  */
 const selectOptions = async (req, res) => {
 	try {
-		const result = await tagService.selectOptions();
+		const result = tagService.selectOptions();
 
 		return success(res, result);
 	} catch (error) {
