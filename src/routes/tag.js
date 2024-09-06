@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { index, store, update, show, destroy, selectOptions } = require('../controllers/tag.controllers');
-const { storeRules, updateRules } = require('../middleware/rules/tag.middleware');
-const { validate } = require('../middleware/validate.middleware');
+const { index, store, update, show, destroy, selectOptions } = require('../controllers/tag');
+const { storeRules, updateRules } = require('../middleware/rules/tag');
+const { validate } = require('../middleware/validate');
 
 router.route('/tags')
 	.get(index)

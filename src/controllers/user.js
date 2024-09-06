@@ -1,9 +1,9 @@
-const UserService = require('../services/user.services');
+const UserService = require('../services/user');
 const {
 	serialize,
 	serializeCollection,
 	serializeDetail,
-} = require('../serializers/user.serializers');
+} = require('../serializers/user');
 const {
 	success,
 	paginated,

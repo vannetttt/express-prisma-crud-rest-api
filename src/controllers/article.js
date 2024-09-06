@@ -1,9 +1,9 @@
-const articleService = require('../services/article.services');
+const articleService = require('../services/article');
 const {
 	serialize,
 	serializeCollection,
 	serializeDetail,
-} = require('../serializers/article.serializers');
+} = require('../serializers/article');
 const {
 	paginated,
 	internalError,
