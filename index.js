@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const fs = require('fs');
 const path = require('path');
+const rateLimit = require('express-rate-limit');
 const cors = require('cors');
 const { endPointNotFoundMiddleware } = require('./src/middleware/not-found');
 const { errorHandler } = require('./src/middleware/error-exception');
@@ -16,6 +17,15 @@ webapp.use(express.json());
 
 // Allow CORS from the specified origin
 webapp.use(cors({ origin: process.env.CORS_ORIGIN }));
+
+// Rate limiter
+const limiter = rateLimit({
+	windowMs: 15 * 60 * 1000, // 15 minutes
+	max: 100, // limit each IP to 100 requests per windowMs
+	message: 'Too many requests from this IP, please try again after 15 minutes',
+});
+
+webapp.use(limiter);
 
 webapp.get('/', (req, res) => res.send('Hello World!'));
 
